@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects · Software Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <nav class="top-bar">
+          <p class="brand">Projects · Systems</p>
+          <div class="top-links">
+            <a class="text-link" href="#cases">Case Studies</a>
+            <a class="text-link" href="#contact">Contact</a>
+            <a class="text-link" href="https://github.com/">GitHub</a>
+          </div>
+        </nav>
+        <div class="hero-content">
+          <p class="eyebrow">Software Developer · Systems Thinker</p>
+          <h1>Professional-grade projects that pair security, reliability, and delightful UX.</h1>
+          <p class="lede">
+            I build resilient infrastructure and tools that survive CGNAT, backup failures, and chaotic thinking.
+            Every deliverable is documented, monitored, and intentionally designed for the people who rely on it.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#cases">Showcase the work</a>
+            <a class="btn ghost" href="mailto:you@example.com">Let’s collaborate</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-panel__item">
+            <p class="hero-panel__label">Uptime confidence</p>
+            <strong>99.9%</strong>
+            <span>Alerted before outages, monitored via mixed probes.</span>
+          </div>
+          <div class="hero-panel__item">
+            <p class="hero-panel__label">Backups validated</p>
+            <strong>12 months</strong>
+            <span>Restore tests for every scheduled snapshot.</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="overview" id="overview">
+        <div class="overview__body">
+          <h2>Design principles</h2>
+          <p>
+            Clarity, accountability, and polish guide every system. Infrastructure is hardened, tooling is intuitive,
+            and documentation is always present so collaborators can step in confidently.
+          </p>
+          <div class="pill-list">
+            <span>Zero-trust defaults</span>
+            <span>Graph-first visualization</span>
+            <span>Repeatable deployments</span>
+            <span>Autosave + undo safety</span>
+          </div>
+        </div>
+        <div class="overview-stats">
+          <div class="stat">
+            <p class="stat-label">Services monitored</p>
+            <strong>8 critical endpoints</strong>
+            <small>Probes for tunnel, API, database, and storage.</small>
+          </div>
+          <div class="stat">
+            <p class="stat-label">Autosave coverage</p>
+            <strong>100% of actions</strong>
+            <small>Snapshot + undo guards remove fear of experimentation.</small>
+          </div>
+          <div class="stat">
+            <p class="stat-label">Backup cadence</p>
+            <strong>Nightly + restore checks</strong>
+            <small>Restic/Borg to Cloud + external media.</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="cases" id="cases">
+        <article class="case-card elevated">
+          <header>
+            <p class="eyebrow">HomeServer Setup · Systems / DevOps / Security</p>
+            <h2>Reachable under CGNAT, hardened against compromise</h2>
+          </header>
+          <p class="case-lede">
+            The home lab stays accessible without opening router ports. Hardened SSH/SFTP, tunnels, monitoring, and backup drills deliver enterprise-grade confidence.
+          </p>
+          <div class="case-grid">
+            <div>
+              <h3>Constraints</h3>
+              <ul>
+                <li>Dynamic IP / CGNAT made port-forwarding volatile.</li>
+                <li>SSH/SFTP exposed to brute-force attacks.</li>
+                <li>Need for reliable backups + observability.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Built it</h3>
+              <ul>
+                <li>Key-only SSH, disabled passwords + root, strict session limits.</li>
+                <li>Chrooted <code>sftpusers</code> group with jailed directories.</li>
+                <li>Cloudflare Tunnel + Tailscale/WireGuard to keep traffic private.</li>
+                <li>Docker Compose for predictable deployments and isolation.</li>
+                <li>Restic/Borg backups with B2/S3 targets and restore validation.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-grid">
+            <div>
+              <h3>Monitoring & reliability</h3>
+              <ul>
+                <li>Uptime probes for tunnel + admin UI.</li>
+                <li>SMART scans for disk health + alert routing.</li>
+                <li>Central log collection for auth events and restarts.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Takeaways</h3>
+              <ul>
+                <li>Misconfiguration is the primary risk—defaults lean least-privileged.</li>
+                <li>Tunnels win when CGNAT prevents stable inbound routes.</li>
+                <li>Backups only matter when restores are tested.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-links">
+            <a class="pill" href="https://drive.google.com/file/d/1PPKatAvsSpp5oTtotDeMg7-0nRwLCxCZ/view?usp=drive_link" target="_blank">Architecture notes PDF</a>
+            <a class="pill" href="https://drive.google.com/file/d/1GaO37v1o1Nnkl51TF8M-C8YZZ3TpPfJg/view?usp=drive_link" target="_blank">Monitoring & backup checklist</a>
+          </div>
+          <footer>
+            <p>Next upgrades: routed alerts (email/Discord/Slack), immutable retention, and infra documentation + network diagrams.</p>
+          </footer>
+        </article>
+
+        <article class="case-card elevated secondary">
+          <header>
+            <p class="eyebrow">MindSky · Visual thinking</p>
+            <h2>Graph snapshots that make experimentation feel safe</h2>
+          </header>
+          <p class="case-lede">
+            Nodes are presentational, the canvas owns behavior, and every graph state is stored as JSONB so undo/redo, autosave, and collaboration stay reliable.
+          </p>
+          <div class="case-grid">
+            <div>
+              <h3>Problems</h3>
+              <ul>
+                <li>Linear note-taking fails for exploratory thought.</li>
+                <li>Users feared losing work when experimenting.</li>
+                <li>State needed to remain visual, versionable, and shareable.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Solution</h3>
+              <ul>
+                <li>Canvas stores graph logic, nodes purely render themselves.</li>
+                <li>React Flow + custom node components for visual cues.</li>
+                <li>Graph snapshots committed on meaningful actions and saved via debounced autosave.</li>
+                <li>Backend keeps JSONB nodes/edges for atomic restores and replay.</li>
+                <li>Snapshot history feeds undo (Cmd+Z) and redo (Ctrl+Shift+Z / Ctrl+Y).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-highlight">
+            <p>Snapshots capture every committed action; drag/selection changes remain transient to avoid polluting history. Autosave pauses during undo/redo so the backend mirrors the brain's stable state.</p>
+          </div>
+          <div class="tech">
+            <p class="tech-label">Tech</p>
+            <p>React · TypeScript · React Flow · Node.js · PostgreSQL · JSONB graph storage</p>
+          </div>
+          <footer>
+            <p>Outcome: non-linear thinking feels fluid, experimentation is encouraged, and the architecture is ready for collaboration, exports, and version history.</p>
+            <p class="next">Next: surface version history UI, multi-user collaboration, shareable export flows.</p>
+          </footer>
+        </article>
+      </section>
+
+      <section id="contact" class="contact-panel">
+        <div>
+          <h3>Ready to collaborate?</h3>
+          <p>Tell me about your platform needs—self-hosted systems, secure tunnels, or expressive tools. I’ll send a proposal within 24 hours.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:you@example.com">Email me</a>
+          <a class="btn ghost" href="https://github.com/">View GitHub</a>
+        </div>
+      </section>
+
+      <footer>
+        <p>Built for GitHub Pages · polished for stakeholders who care about security, reliability, and experience.</p>
+        <p class="muted">Assets and documentation update every sprint.</p>
+      </footer>
+    </div>
+  </body>
+</html>
